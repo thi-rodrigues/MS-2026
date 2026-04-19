@@ -1,3 +1,26 @@
+server:
+  port: 8080
+  
 spring:
   application:
     name: rest-with-spring-boot-and-java
+
+logging:
+  level:
+#     root: WARN
+     com.trsystems: INFO
+     
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+  endpoint:
+    health:
+      show-details: ALWAYS        
+
+greeting-service:
+  greeting: Olá
+  default-value: "Mundo"
+  
