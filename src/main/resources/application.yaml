@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: rest-with-spring-boot-and-java
+    name: greeting-service
 
 logging:
   level:
@@ -21,6 +21,6 @@ management:
       show-details: ALWAYS        
 
 greeting-service:
-  greeting: Olá
-  default-value: "Mundo"
+  greeting: "Hello"
+  default-value: "World"
   
