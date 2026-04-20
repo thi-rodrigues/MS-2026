@@ -8,6 +8,9 @@ import com.trsystems.config.GreetingConfig;
 
 @SpringBootApplication
 @EnableConfigurationProperties(GreetingConfig.class)
+/* @EnableConfigurationProperties
+ * Habilita o uso de classes anotadas com @ConfigurationProperties
+ */
 public class TrSistemsApplication {
 
 	public static void main(String[] args) {
