@@ -15,18 +15,21 @@ import com.trsystems.model.Greeting;
 @RequestMapping("/greeting")
 public class GreetingController {
 	
-	private static final String template = "Hello, %s";
+	private static final String template = "%s, %s!";
 	private final AtomicLong counter = new AtomicLong();
 	
 	@Autowired
-	private GreetingConfig greetingConfig;
+	private GreetingConfig configuration;
 	
 	@GetMapping
-	public Greeting greeting(@RequestParam(defaultValue = "World") String name) {
+	public Greeting greeting(
+			@RequestParam(value= "name", defaultValue = "") String name
+			) {
 		if ( name.isEmpty() )
-			name =  greetingConfig.defaultValue();
+			name =  configuration.getDefaultValue();
 		
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+		return new Greeting(counter.incrementAndGet(), 
+				String.format(template, configuration.getGreeting(), name));
 	}
 
 }

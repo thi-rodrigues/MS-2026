@@ -5,10 +5,10 @@ spring:
   application:
     name: greeting-service
   config:
-    import: optional:configserver:http://localhost:8888/ # Usar o configserver remoto
+    import: optional:configserver:http://localhost:8888 # Usar o configserver remoto
   cloud:
     config:
-      profile: es
+      profile: it
       
 management:
   endpoints:
