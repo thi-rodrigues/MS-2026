@@ -4,12 +4,12 @@ server:
 spring:
   application:
     name: greeting-service
-
-logging:
-  level:
-#     root: WARN
-     com.trsystems: INFO
-     
+  config:
+    import: optional:configserver:http://localhost:8888/ # Usar o configserver remoto
+  cloud:
+    config:
+      profile: es
+      
 management:
   endpoints:
     web:
@@ -20,7 +20,11 @@ management:
     health:
       show-details: ALWAYS        
 
-greeting-service:
-  greeting: "Hello"
-  default-value: "World"
+#greeting-service:
+#  greeting: "Hello"
+#  default-value: "World"
   
+logging:
+  level:
+#     root: WARN
+     com.trsystems: INFO

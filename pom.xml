@@ -17,7 +17,7 @@
 	
 	<properties>
 		<java.version>21</java.version>
-		<!--  <spring-cloud.version>2025.0.2</spring-cloud.version> -->
+		<spring-cloud.version>2025.0.2</spring-cloud.version>
 	</properties>
 	
 	<dependencies>
@@ -43,12 +43,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<!-- 
+		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		-->
 	</dependencies>
 
 	<build>
@@ -60,7 +59,19 @@
 		</plugins>
 	</build>
 
-<!-- 
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -72,5 +83,4 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
--->
 </project>
